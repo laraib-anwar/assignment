@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="form">
+      <form action="/" method="POST">
+        <input
+          readonly
+          value="<%= number %>"
+          name="number"
+          id="verify"
+          autocomplete="off"
+          placeholder="Your Phone number"
+        />
+
+        <button id="myButton" type="submit" name="button">Resend</button>
+      </form>
+
+      <br />
+
+      <form action="/verify" method="POST">
+        <p>Remember your code will expire after 2 minutes.</p>
+        <h2>Enter your verification code:</h2>
+
+        <input
+          type="text"
+          name="code"
+          autocomplete="off"
+          placeholder="eg.12345"
+        />
+
+        <button type="submit" name="verifyButton">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
